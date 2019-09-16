@@ -55,8 +55,6 @@ class OrderListResolver implements ResolverInterface
         array $value = null,
         array $args = null
     ) {
-        var_dump('heyThere');
-        exit(1);
         $items = [];
 
         $customerId = $context->getUserId();
