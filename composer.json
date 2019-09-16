@@ -1,0 +1,34 @@
+{
+    "name": "scandipwa/orders-graphql",
+    "description": "ScandiPWA Graphql extension for Orders",
+    "version": "1.0",
+    "keywords": [
+        "magento2",
+        "scandipwa",
+        "pwa"
+    ],
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0"
+    ],
+    "support": {
+        "email": "info@scandiweb.com"
+    },
+    "authors": [
+        {
+            "name": "Yefim Butrameev",
+            "email": "yefim.butrameev@scandiweb.com"
+        }
+    ],
+    "require": {
+        "magento/module-cms-graph-ql": "*"
+    },
+    "autoload": {
+        "files": [
+            "src/registration.php"
+        ],
+        "psr-4": {
+            "ScandiPWA\\OrdersGraphQl\\": "src/"
+        }
+    }
+}
