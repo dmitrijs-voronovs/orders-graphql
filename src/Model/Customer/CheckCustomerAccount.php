@@ -63,7 +63,7 @@ class CheckCustomerAccount
      */
     public function execute(?int $customerId, ?int $customerType): void
     {
-        if (true === $this->isCustomerGuest($customerId, $customerType)) {
+        if ($this->isCustomerGuest($customerId, $customerType)) {
             throw new GraphQlAuthorizationException(__('The current customer isn\'t authorized.'));
         }
 
@@ -76,7 +76,7 @@ class CheckCustomerAccount
             );
         }
 
-        if (true === $this->authentication->isLocked($customerId)) {
+        if ($this->authentication->isLocked($customerId)) {
             throw new GraphQlAuthenticationException(__('The account is locked.'));
         }
 
@@ -95,9 +95,9 @@ class CheckCustomerAccount
      */
     private function isCustomerGuest(?int $customerId, ?int $customerType): bool
     {
-        if (null === $customerId || null === $customerType) {
+        if (is_null($customerId) || is_null($customerType)) {
             return true;
         }
-        return 0 === (int)$customerId || (int)$customerType === UserContextInterface::USER_TYPE_GUEST;
+        return (int)$customerId === 0 || (int)$customerType === UserContextInterface::USER_TYPE_GUEST;
     }
 }
