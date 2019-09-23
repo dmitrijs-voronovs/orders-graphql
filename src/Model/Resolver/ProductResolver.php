@@ -9,9 +9,9 @@
  */
 
 declare(strict_types=1);
- 
+
 namespace ScandiPWA\OrdersGraphQl\Model\Resolver;
- 
+
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\ResolverInterface;

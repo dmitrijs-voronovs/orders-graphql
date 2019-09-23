@@ -8,8 +8,8 @@
 # */
 
 type Query {
-    getOrderList: OrderList @resolver(class: "ScandiPWA\\OrdersGraphQl\\Model\\Resolver\\OrderListResolver") @doc(description: "The Sales Order query returns information about a Sales orderrr")
-    getOrderById(id: Int): Order @resolver(class: "ScandiPWA\\OrdersGraphQl\\Model\\Resolver\\ExpandedOrderResolver") @doc(description: "The Sales Order query returns information about a Sales order")
+    getOrderList: OrderList @resolver(class: "\\ScandiPWA\\OrdersGraphQl\\Model\\Resolver\\OrderListResolver") @doc(description: "The Sales Order query returns information about a Sales order")
+    getOrderById(id: Int): Order @resolver(class: "\\ScandiPWA\\OrdersGraphQl\\Model\\Resolver\\ExpandedOrderResolver") @doc(description: "The Sales Order query returns information about a Sales order")
 }
 
 type OrderList {
@@ -31,7 +31,11 @@ type Order {
     base_order_info: BaseOrderInfo
     payment_info: PaymentInfo
     shipping_info: ShippingInfo
+<<<<<<< HEAD
     order_products: [ProductInterface] @resolver(class: "ScandiPWA\\OrdersGraphQl\\Model\\Resolver\\ProductResolver") 
+=======
+    order_products: [ProductInterface] @resolver(class: "\\ScandiPWA\\OrdersGraphQl\\Model\\Resolver\\ProductResolver")
+>>>>>>> my-account-changes
 }
 
 type PaymentInfo {

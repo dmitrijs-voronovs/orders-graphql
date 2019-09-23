@@ -10,8 +10,8 @@
 
 use \Magento\Framework\Component\ComponentRegistrar;
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
+ComponentRegistrar::register(
+    ComponentRegistrar::MODULE,
     'ScandiPWA_OrdersGraphQl',
     __DIR__
 );
