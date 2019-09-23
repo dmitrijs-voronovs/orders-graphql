@@ -16,7 +16,7 @@ use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 use Magento\Sales\Model\ResourceModel\Order\CollectionFactoryInterface;
-use \ScandiPWA\OrdersGraphQl\Model\Customer\CheckCustomerAccount;
+use ScandiPWA\OrdersGraphQl\Model\Customer\CheckCustomerAccount;
 
 /**
  * Orders data reslover
@@ -58,6 +58,7 @@ class OrderListResolver implements ResolverInterface
         $items = [];
 
         $customerId = $context->getUserId();
+
         $this->checkCustomerAccount->execute($customerId, $context->getUserType());
 
         $orders = $this->collectionFactory->create($customerId);
