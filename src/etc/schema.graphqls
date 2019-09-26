@@ -31,11 +31,7 @@ type Order {
     base_order_info: BaseOrderInfo
     payment_info: PaymentInfo
     shipping_info: ShippingInfo
-<<<<<<< HEAD
-    order_products: [ProductInterface] @resolver(class: "ScandiPWA\\OrdersGraphQl\\Model\\Resolver\\ProductResolver") 
-=======
     order_products: [ProductInterface] @resolver(class: "\\ScandiPWA\\OrdersGraphQl\\Model\\Resolver\\ProductResolver")
->>>>>>> my-account-changes
 }
 
 type PaymentInfo {

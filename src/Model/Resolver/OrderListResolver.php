@@ -58,10 +58,7 @@ class OrderListResolver implements ResolverInterface
         $items = [];
 
         $customerId = $context->getUserId();
-<<<<<<< HEAD
-=======
 
->>>>>>> my-account-changes
         $this->checkCustomerAccount->execute($customerId, $context->getUserType());
 
         $orders = $this->collectionFactory->create($customerId);
@@ -81,11 +78,7 @@ class OrderListResolver implements ResolverInterface
                 'shipping_description' => $order->getShippingDescription(),
                 'tracking_numbers' => $trackNumbers
             ];
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> my-account-changes
             $base_info = [
                 'id' => $order->getId(),
                 'increment_id' => $order->getIncrementId(),
