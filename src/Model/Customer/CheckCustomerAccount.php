@@ -1,8 +1,13 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * ScandiPWA_OrdersGraphQl
+ *
+ * @category    ScandiPWA
+ * @package     ScandiPWA_OrdersGraphQl
+ * @author      Yefim Butrameev <info@scandiweb.com>
+ * @copyright   Copyright (c) 2019 Scandiweb, Ltd (https://scandiweb.com)
  */
+
 declare(strict_types=1);
 
 namespace ScandiPWA\OrdersGraphQl\Model\Customer;
